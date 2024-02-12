@@ -1,0 +1,564 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: linear-gradient(to bottom, #0f001d, #290649);
+  color: #fff;
+}
+
+#header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/img1raw.png);
+  /* border-radius: 73% 27% 52% 48% / 53% 65% 35% 47%; */
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 150%;
+}
+
+.container {
+  padding: 5px 5%;
+}
+
+.logo {
+  height: 200px;
+  width: 200px;
+  margin-left: -50px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: 450px;
+  margin-top: -22px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.header-text {
+  margin-top: 8%;
+  font-size: 30px;
+}
+
+.header-text h1 {
+  margin-top: 20px;
+  font-size: 60px;
+}
+
+#about {
+  padding: 80px 0 50px;
+  color: gray;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-col-1 {
+  flex-basis: 35%;
+}
+
+.about-col-1 img {
+  width: 70%;
+  height: auto;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, #18032c, #090011);
+  padding: 10px;
+}
+
+.about-col-2 {
+  flex-basis: 60%;
+}
+
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff7900;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 15px 0;
+}
+
+.tab-contents ul li span {
+  color: #ff8500;
+  font-size: 14px;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+#services {
+  padding: 30px 0;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.services-list div {
+  background: linear-gradient(to bottom right, #36096c, #0f001d);
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s, shadow 0.5s;
+}
+
+.services-list div i {
+  font-size: 45px;
+  margin: 0 5px 15px;
+}
+
+.services-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.services-list div a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 12px;
+  display: inline-block;
+}
+
+.services-list div:hover {
+  background: #0f001d;
+  transform: translate3d(-1.5rem, -0.5rem, 1rem);
+  box-shadow: 10px 20px 35px 5px #090011;
+}
+
+#portfolio {
+  padding: 30px 0;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.layer {
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #000000);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 30px;
+  text-align: center;
+  font-size: 12px;
+  transition: height 0.5s;
+}
+
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.layer a {
+  margin-top: 10px;
+  color: #ff7900;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 37px;
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
+  height: 100%;
+}
+
+.contact-left {
+  flex-basis: 50%;
+}
+
+.contact-left p {
+  margin-top: 30px;
+}
+
+.contact-left p i {
+  color: #ff7900;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.contact-right {
+  flex-basis: 45%;
+  display: flex;
+  align-items: center;
+}
+/* SOCIALS CSS STARTS HERE------------------------------------------------------------------ */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.card1 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 90px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+
+.instagram {
+  margin-top: 1.5em;
+  margin-left: 1.2em;
+  fill: #cc39a4;
+}
+
+.card2 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 90px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+
+.twitter {
+  margin-top: 1.5em;
+  margin-left: -0.9em;
+  fill: #03a9f4;
+}
+
+.card3 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 5px 90px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+
+.github {
+  margin-top: -0.6em;
+  margin-left: 1.2em;
+}
+
+.card4 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 90px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+
+.discord {
+  margin-top: -0.9em;
+  margin-left: -1.2em;
+  fill: #8c9eff;
+}
+
+.card1:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #cc39a4;
+}
+
+.card1:hover .instagram {
+  fill: white;
+}
+
+.card2:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #03a9f4;
+}
+
+.card2:hover .twitter {
+  fill: white;
+}
+
+.card3:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: black;
+}
+
+.card3:hover .github {
+  fill: white;
+}
+
+.card4:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #8c9eff;
+}
+
+.card4:hover .discord {
+  fill: white;
+}
+
+/* SOCIALS CSS END HERE-------------------------------------------------------------------- */
+/* BUTTON CSS STARTS HERE------------------------------------------------------------------ */
+.btn-css {
+  margin-top: 30px;
+}
+.button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  color: #0f1923;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.15s ease;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: calc(50% - 5px);
+  border: 1px solid #7d8082;
+  transition: all 0.15s ease;
+}
+
+.button::before {
+  top: 0;
+  border-bottom-width: 0;
+}
+
+.button::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
+.button:active,
+.button:focus {
+  outline: none;
+}
+
+.button:active::before,
+.button:active::after {
+  right: 3px;
+  left: 3px;
+}
+
+.button:active::before {
+  top: 3px;
+}
+
+.button:active::after {
+  bottom: 3px;
+}
+
+.button_lg {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #0f1923;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.button_lg::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background-color: #0f1923;
+}
+
+.button_lg::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #0f1923;
+  transition: all 0.2s ease;
+}
+
+.button_sl {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
+  width: 0;
+  background-color: #ff4655;
+  transform: skew(-15deg);
+  transition: all 0.2s ease;
+}
+
+.button_text {
+  position: relative;
+}
+
+.button:hover {
+  color: #0f1923;
+}
+
+.button:hover .button_sl {
+  width: calc(100% + 15px);
+}
+
+.button:hover .button_lg::after {
+  background-color: #fff;
+}
+
+/* BUTTON CSS ENDS HERE------------------------------------------------------------------ */
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #5a189a;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+/* RESPONSIVE CSS STARTS HERE---------------------------------------------------------------- */
+
+@media screen and (max-width: 600px) {
+}
